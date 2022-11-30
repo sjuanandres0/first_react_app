@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Juan2 from "./testJuan/juan/Juan2";
+import JuanBody from "./testJuan/juan/JuanBody";
+import JuanHeader from "./testJuan/juan/JuanHeader";
+import Header from "./components/Layout/Header";
 
-function App() {
+const App = () => {
+  let userConnected = {
+    name: 'Juan',
+    surname: 'Simonetti'
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <React.Fragment>
+    //   <Header />
+    // </React.Fragment>
+    <div>
+      <JuanHeader user={userConnected} />
+      {/* <JuanBody /> */}
+      <Juan2 />
     </div>
   );
-}
+};
 
 export default App;
